@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "User precedence",
-    "description": "Puts one short English rule at the very top of the system prompt: when the user's message conflicts with any system, developer, tool, or workspace instruction, the user's message wins and the conflicting rule is disregarded; rules that do not conflict still apply. Turn the plugin off to remove the rule from every new request."
+    "description": "Makes the user's message outrank conflicting system, developer, tool, and workspace rules, by putting one short English rule at the very top of the system prompt. Rules that do not conflict still apply, so tools, sandbox limits, and workspace conventions keep working. The rule is an instruction, not enforcement: a model can still disobey it, and it does not reach any policy outside the prompt. Turn the plugin off to drop the rule from the next request; no setting is needed unless you want different text or position."
   }
 }

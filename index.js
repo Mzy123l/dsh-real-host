@@ -1,5 +1,5 @@
 /**
- * dsh-user-precedence — 把一句简短的英文规则插进系统提示词的最前面：
+ * dsh-real-host — 把一句简短的英文规则插进系统提示词的最前面：
  * 用户消息与任何其它指令冲突时，以用户消息为准。
  *
  * 实现只有一处：向 `ctx.systemPrompt` 注册一个 prompt section。

@@ -45,9 +45,9 @@ bundle patch 只插入一行 Host 插件：
 
 ## 实现
 
-只有一处：向 `ctx.systemPrompt` 注册名为 `deployment:user-precedence` 的段落，随插件卸载一起销毁。关掉插件后，下一次请求就不再带这句；不写会话日志，也不落任何文件。
+只有一处：向 `ctx.systemPrompt` 注册名为 `deployment:user-precedence` 的段落，随插件卸载一起销毁。关掉插件后，下一次请求就不再带这句。插件自己不落任何文件；和别的段落一样，这句会出现在会话渲染出的系统提示词里，由 harness 记成 `system/message` 事件。
 
-作用范围：全局注册，profile 里所有 agent（含子 agent）都会带上这句。
+作用范围：全局注册，profile 里所有 agent（含子 agent）都会带上这句——例外是把 persona 设成 `complete: true` 的 agent，那种 agent 的提示词只有它自己的 persona。
 
 ## 限制
 

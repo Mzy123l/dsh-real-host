@@ -45,9 +45,9 @@ The row needs no configuration. To change the text or its position, override the
 
 ## How it works
 
-One `ctx.systemPrompt.section()` registration named `deployment:user-precedence`, disposed with the plugin. Turning the plugin off removes the rule from the next request; nothing is written to the session log or to any file.
+One `ctx.systemPrompt.section()` registration named `deployment:user-precedence`, disposed with the plugin. Turning the plugin off removes the rule from the next request. The plugin writes no files of its own; like every other prompt section, the rule appears in the session's rendered system prompt, which the Harness records as a `system/message` event.
 
-Scope note: the rule is registered globally, so it applies to every agent in the profile, including subagents.
+Scope note: the rule is registered globally, so it applies to every agent in the profile, including subagents — except an agent whose persona sets `complete: true`, which replaces the whole prompt with that persona alone.
 
 ## Limitations
 
