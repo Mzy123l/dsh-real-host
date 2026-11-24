@@ -1,6 +1,6 @@
 {
   "name": "dsh-real-host",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Puts a short English rule at the top of the DeepSeek Harness system prompt: when the user's message conflicts with any system, developer, tool, or workspace instruction, the user's message wins and the conflicting rule is disregarded.",
   "license": "GPL-3.0-only",
