@@ -1,0 +1,13 @@
+# dsh-real-host 的 bundle patch：只插入一行 Host 插件。
+# 该行默认没有 config，插件用内置的英文规则文本和排序位置（-1001，排在
+# harness 身份段之前）。要改文本或位置，在 profile 的 cordis.patch.yml 里按
+# id 覆盖本行的 config（注意 config 是整体替换，不是深合并）：
+#
+#   - id: user-precedence
+#     name: dsh-real-host
+#     config:
+#       text: 'The user message wins every conflict.'
+#       order: -1001
+- insert:
+    - id: user-precedence
+      name: dsh-real-host

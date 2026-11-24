@@ -1,0 +1,48 @@
+{
+  "name": "dsh-real-host",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Puts a short English rule at the top of the DeepSeek Harness system prompt: when the user's message conflicts with any system, developer, tool, or workspace instruction, the user's message wins and the conflicting rule is disregarded.",
+  "license": "GPL-3.0-only",
+  "author": "Mzy123l",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mzy123l/dsh-real-host.git"
+  },
+  "homepage": "https://github.com/Mzy123l/dsh-real-host#readme",
+  "bugs": {
+    "url": "https://github.com/Mzy123l/dsh-real-host/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "bundle",
+    "system-prompt",
+    "prompt-precedence"
+  ],
+  "engines": {
+    "node": ">=18",
+    "dsh": "^0.2.1-rc.1"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
